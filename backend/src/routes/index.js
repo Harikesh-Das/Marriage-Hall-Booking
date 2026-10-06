@@ -2,6 +2,7 @@ import { Router } from 'express';
 import apiResponse from ' .. /utils/apiResponse. js';
 import pool from ' .. /config/db. js';
 import authRoutes from './auth.routes.js';
+import hallRoutes from './hall.routes.js';
 
 const router = Router();
 
@@ -23,5 +24,6 @@ router.get('/health', async (req, res) => {
 });
 
 router.use("/auth",authRoutes);
+router.use("/halls", hallRoutes);
 
 export default router;
